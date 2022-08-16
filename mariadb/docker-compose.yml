@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  of-db:
+    container_name: of-db
+    image: mariadb:latest
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test1,test2
+      MYSQL_USER: don
+      MYSQL_PASSWORD: don
