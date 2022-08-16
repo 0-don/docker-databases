@@ -9,6 +9,6 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: test1,test2
+      MYSQL_DATABASE: testdb
       MYSQL_USER: don
       MYSQL_PASSWORD: don
