@@ -6,7 +6,7 @@ services:
     image: postgres:latest
     restart: always
     ports:
-      - "5432:5432"
+      - 5432:5432
     environment:
       - POSTGRES_DB=test1,test2
       - POSTGRES_USER=postgres
