@@ -5,8 +5,11 @@ services:
     container_name: postgres
     image: postgres:latest
     restart: always
+    expose:
+      - "5433"
+    command: -p 5433
     ports:
-      - 5432:5432
+      - 5433:5433
     environment:
       - POSTGRES_DB=testdb
       - POSTGRES_USER=postgres
