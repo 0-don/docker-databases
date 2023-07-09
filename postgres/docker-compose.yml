@@ -6,14 +6,16 @@ services:
     image: postgres:latest
     restart: always
     expose:
-      - "5433"
-    command: -p 5433
+      - "5432"
+    command: -p 5432
     ports:
-      - 5433:5433
+      - 5432:5432
     environment:
       - POSTGRES_DB=testdb
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
 
 volumes:
   postgres:
