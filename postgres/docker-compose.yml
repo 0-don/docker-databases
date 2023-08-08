@@ -7,15 +7,15 @@ services:
     restart: always
     expose:
       - "5432"
-    command: -p 5432
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_DB=testdb
+      - POSTGRES_DB=privnote
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
       - ./scripts:/docker-entrypoint-initdb.d
+    # command: postgres -c 'max_connections=10000'
 
 volumes:
   postgres:
