@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  surrealdb:
+    image: surrealdb/surrealdb:latest
+    command: start --log trace --user root --pass root memory
+    container_name: surrealdb
+    ports:
+      - "8000:8000"
+    environment:
+      - PULL=always
