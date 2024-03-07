@@ -1,16 +1,13 @@
 version: '3.8'
+
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:latest
     container_name: keycloak
+    image: quay.io/keycloak/keycloak:latest
+    ports: 8081:8080
     restart: always
-    command: start-dev
-    ports:
-      - "8081:8080"
-    volumes:
-      - ./config/:/opt/keycloak/data/import:ro
-    entrypoint: 
-      '/opt/keycloak/bin/kc.sh start-dev --import-realm'  
+    volumes: ./config/:/opt/keycloak/data/import:ro
+    entrypoint: '/opt/keycloak/bin/kc.sh start-dev --import-realm'
     environment:
       KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: "admin"
+      KEYCLOAK_ADMIN_PASSWORD: admin
