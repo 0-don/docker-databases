@@ -6,7 +6,6 @@ https://www.linkedin.com/pulse/keycloak-docker-container-how-exportimport-realm-
  docker exec -it keycloak /bin/bash
  /opt/keycloak/bin/kc.sh export --dir /opt/keycloak/data/import --realm ecommerce --users realm_file
  cp keycloak:/opt/keycloak/data/import/ecommerce-realm.json ./ecommerce-realm.json
-
 ```
 
 ### import
