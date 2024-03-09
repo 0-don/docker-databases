@@ -11,7 +11,7 @@ services:
       - start-dev
       - --import-realm
     volumes:
-      - ./config/:/opt/keycloak/data/import:ro
+      - ./config/:/opt/keycloak/data/import
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
