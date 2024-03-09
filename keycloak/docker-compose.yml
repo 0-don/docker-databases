@@ -8,10 +8,12 @@ services:
     ports:
       - 8081:8080
     command:
-      - start-dev
+      - start-dev # for dev
       - --import-realm
     volumes:
       - ./config/:/opt/keycloak/data/import
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_PROXY: edge # for prod
+      KC_HOSTNAME: localhost # for prod
