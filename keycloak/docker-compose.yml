@@ -10,11 +10,11 @@ services:
     command:
       - start-dev # for dev
       - --import-realm
+      # - --log-level=DEBUG
     volumes:
       - ./config/:/opt/keycloak/data/import
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
-      ROOT_LOG_LEVEL: DEBUG #TRACE
       # KC_PROXY: edge # for prod
       # KC_HOSTNAME: localhost # for prod
