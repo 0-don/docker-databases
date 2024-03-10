@@ -15,5 +15,6 @@ services:
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
-      KC_PROXY: edge # for prod
-      KC_HOSTNAME: localhost # for prod
+      ROOT_LOG_LEVEL: DEBUG #TRACE
+      # KC_PROXY: edge # for prod
+      # KC_HOSTNAME: localhost # for prod
