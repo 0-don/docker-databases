@@ -3,8 +3,8 @@ services:
     image: redis:alpine
     container_name: redis
     restart: always
-    command: >
-      --requirepass "redis"
+    # command: >
+    #   --requirepass "redis"
     ports:
       - '6379:6379'
 
